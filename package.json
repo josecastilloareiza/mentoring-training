@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
-    "start": "npm run build && http-server -o src/index.html",
+    "start": "npm run format && npm run build && npm run serve",
+    "serve": "http-server -o src/index.html",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json"
   },
@@ -21,6 +22,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@types/jest": "^26.0.3"
+    "@types/jest": "^26.0.3",
+    "common-js": "^0.3.8"
   }
 }
