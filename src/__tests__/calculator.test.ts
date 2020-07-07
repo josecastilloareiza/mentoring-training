@@ -1,5 +1,5 @@
 window.alert = jest.fn();
-import { add } from '../index';
+import { add } from '../aritmethic-functions';
 
 test('Can sum two positive numbers', () => {
   expect(add(4, 5)).toBe(9);

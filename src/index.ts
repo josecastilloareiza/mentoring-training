@@ -1,6 +1,7 @@
 import { Command } from './command';
 import { ScreenLog } from './screen-log';
 import { AddCommand, SubCommand, MulCommand, DivCommand } from './commands';
+import { Calculator } from './calculator';
 
 function run(): void {
   const screenLog = new ScreenLog();

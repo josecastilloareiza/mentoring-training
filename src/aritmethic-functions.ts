@@ -10,3 +10,5 @@ export function mul(x: number, y: number): number {
 export function div(x: number, y: number): number {
   return x / y;
 }
+
+export type Operator = (x: number, y: number) => number;
