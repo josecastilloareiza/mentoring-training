@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "tsc && browserify",
+    "build": "tsc && npm run bundle",
     "start": "npm run format && npm run build && npm run serve",
-    "serve": "http-server -o src/index.html",
+    "serve": "http-server -o lib/index.html",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "browserify": "browserify lib/index.js > bundle.js"
+    "bundle": "browserify build/index.js -o lib/bundle.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +24,6 @@
   },
   "dependencies": {
     "@types/jest": "^26.0.3",
-    "browserify": "^16.5.1",
-    "common-js": "^0.3.8"
+    "browserify": "^16.5.1"
   }
 }

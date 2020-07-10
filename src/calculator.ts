@@ -1,4 +1,3 @@
-import { Operator } from './aritmethic-functions';
 import { Command } from './command';
 import { ScreenLog } from './screen-log';
 

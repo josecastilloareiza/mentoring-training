@@ -1,11 +1,11 @@
-import { Operator } from './aritmethic-functions';
+import { Operator } from './operator';
 
 export class Command {
-  execute: Operator;
-  undo: Operator;
+  execute: Operator<number>;
+  undo: Operator<number>;
   value: number;
 
-  constructor(execute: Operator, undo: Operator, value: number) {
+  constructor(execute: Operator<number>, undo: Operator<number>, value: number) {
     this.execute = execute;
     this.undo = undo;
     this.value = value;
