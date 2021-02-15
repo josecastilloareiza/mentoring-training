@@ -1,32 +1,42 @@
-function areValid(x: number, y: number): boolean {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.div = exports.mul = exports.sub = exports.add = void 0;
+function areValid(x, y) {
     return typeof x === 'number' && typeof y === 'number';
 }
-
-export function add(x: number, y: number): number {
+function add(x, y) {
     if (areValid(x, y)) {
         return x + y;
-    } else {
+    }
+    else {
         throw new Error('Both arguments must be numbers');
     }
 }
-export function sub(x: number, y: number): number {
+exports.add = add;
+function sub(x, y) {
     if (areValid(x, y)) {
         return x - y;
-    } else {
+    }
+    else {
         throw new Error('Both arguments must be numbers');
     }
 }
-export function mul(x: number, y: number): number {
+exports.sub = sub;
+function mul(x, y) {
     if (areValid(x, y)) {
         return x * y;
-    } else {
+    }
+    else {
         throw new Error('Both arguments must be numbers');
     }
 }
-export function div(x: number, y: number): number {
+exports.mul = mul;
+function div(x, y) {
     if (areValid(x, y)) {
         return x / y;
-    } else {
+    }
+    else {
         throw new Error('Both arguments must be numbers');
     }
 }
+exports.div = div;

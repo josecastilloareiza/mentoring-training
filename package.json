@@ -4,26 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config jestconfig.json",
-    "build": "tsc && npm run bundle",
     "start": "npm run format && npm run build && npm run serve",
+    "build": "tsc && npm run bundle",
+    "lint": "eslint . --ext .ts",
+    "test": "jest --config jestconfig.json",
     "serve": "http-server -o lib/index.html",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json",
     "bundle": "browserify build/index.js -o lib/bundle.js"
   },
-  "author": "",
+  "author": "Jose Castillo Areiza",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.1",
-    "tslint": "^6.1.2",
-    "tslint-config-prettier": "^1.18.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "eslint": "^7.4.0",
     "typescript": "^3.9.5"
   },
   "dependencies": {
     "@types/jest": "^26.0.3",
-    "browserify": "^16.5.1"
+    "browserify": "^16.5.1",
+    "typescript-eslint": "0.0.1-alpha.0"
   }
 }
